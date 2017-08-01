@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3DBF76B1F301809000C16B9 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBF76A1F301809000C16B9 /* AddTaskViewController.swift */; };
+		C3DBF76D1F3022C3000C16B9 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBF76C1F3022C3000C16B9 /* ListViewCell.swift */; };
 		C3E12E6D1F2F15FA008A56CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E12E6C1F2F15FA008A56CB /* AppDelegate.swift */; };
 		C3E12E6F1F2F15FA008A56CB /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E12E6E1F2F15FA008A56CB /* MenuController.swift */; };
 		C3E12E721F2F15FA008A56CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3E12E701F2F15FA008A56CB /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3DBF76A1F301809000C16B9 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		C3DBF76C1F3022C3000C16B9 /* ListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		C3E12E691F2F15FA008A56CB /* MorningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E12E6C1F2F15FA008A56CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3E12E6E1F2F15FA008A56CB /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
@@ -45,6 +49,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3DBF76E1F3022CA000C16B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C3DBF76C1F3022C3000C16B9 /* ListViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C3DBF76F1F302308000C16B9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C3E12E701F2F15FA008A56CB /* Main.storyboard */,
+				C3E12E781F2F15FA008A56CB /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		C3E12E601F2F15FA008A56CB = {
 			isa = PBXGroup;
 			children = (
@@ -69,9 +90,9 @@
 				C3E12E831F2F1684008A56CB /* SWRevealViewController.m */,
 				C3E12E811F2F1684008A56CB /* MorningApp-Bridging-Header.h */,
 				C3E12E871F2F1D9B008A56CB /* Controllers */,
-				C3E12E701F2F15FA008A56CB /* Main.storyboard */,
+				C3DBF76E1F3022CA000C16B9 /* View */,
+				C3DBF76F1F302308000C16B9 /* Storyboards */,
 				C3E12E761F2F15FA008A56CB /* Assets.xcassets */,
-				C3E12E781F2F15FA008A56CB /* LaunchScreen.storyboard */,
 				C3E12E7B1F2F15FA008A56CB /* Info.plist */,
 				C3E12E731F2F15FA008A56CB /* MorningApp.xcdatamodeld */,
 			);
@@ -84,6 +105,7 @@
 				C3E12E6E1F2F15FA008A56CB /* MenuController.swift */,
 				C3E12E851F2F1D62008A56CB /* MyPlansViewController.swift */,
 				C3E12E881F2F1DC4008A56CB /* NewPlanViewController.swift */,
+				C3DBF76A1F301809000C16B9 /* AddTaskViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -166,8 +188,10 @@
 				C3E12E751F2F15FA008A56CB /* MorningApp.xcdatamodeld in Sources */,
 				C3E12E891F2F1DC4008A56CB /* NewPlanViewController.swift in Sources */,
 				C3E12E6F1F2F15FA008A56CB /* MenuController.swift in Sources */,
+				C3DBF76D1F3022C3000C16B9 /* ListViewCell.swift in Sources */,
 				C3E12E6D1F2F15FA008A56CB /* AppDelegate.swift in Sources */,
 				C3E12E841F2F1684008A56CB /* SWRevealViewController.m in Sources */,
+				C3DBF76B1F301809000C16B9 /* AddTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +360,7 @@
 				C3E12E801F2F15FA008A56CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
