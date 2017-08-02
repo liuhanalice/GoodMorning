@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyPlansViewController:UITableViewController{
+class MyPlansViewController:UIViewController{
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     override func viewDidLoad() {
@@ -22,10 +22,7 @@ class MyPlansViewController:UITableViewController{
         }
 
         }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
 
 }
 
