@@ -16,8 +16,6 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var tasks : [Task] = []
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         if self.revealViewController() != nil {
@@ -67,7 +65,12 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
         
         cell.textLabel?.text = titletext+task.title!+"\n"+contenttext+task.content!+"\n"+timetext+String(task.time)+timeunit
         
+        print(AddTaskViewController.totaltime)
+        
         return cell
+        
+        
+        
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -77,9 +80,12 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
         if editingStyle == .delete
         {
             let task = tasks[indexPath.row]
+            AddTaskViewController.totaltime = AddTaskViewController.totaltime-task.time
+            
+            AddTaskViewController.totaltime2 = AddTaskViewController.totaltime2-task.time
             context.delete(task)
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            
+           
             do
             {
                 tasks = try context.fetch(Task.fetchRequest())}
@@ -87,6 +93,8 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
             {
              print("Fetching Faild")
            }
+            
+            
     }
         tableView.reloadData()
     }
@@ -103,6 +111,8 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
         catch{
             print("Fetching Faild")
         }
+       
+        
     }
     
     
@@ -114,5 +124,5 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
         
     }
         
-
+    
 }

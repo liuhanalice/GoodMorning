@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C32D11211F3175C100D1E158 /* MyPlansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D11201F3175C100D1E158 /* MyPlansViewController.swift */; };
 		C3DBF76B1F301809000C16B9 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBF76A1F301809000C16B9 /* AddTaskViewController.swift */; };
 		C3DBF76D1F3022C3000C16B9 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBF76C1F3022C3000C16B9 /* ListViewCell.swift */; };
 		C3E12E6D1F2F15FA008A56CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E12E6C1F2F15FA008A56CB /* AppDelegate.swift */; };
@@ -16,11 +17,11 @@
 		C3E12E771F2F15FA008A56CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3E12E761F2F15FA008A56CB /* Assets.xcassets */; };
 		C3E12E7A1F2F15FA008A56CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3E12E781F2F15FA008A56CB /* LaunchScreen.storyboard */; };
 		C3E12E841F2F1684008A56CB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E12E831F2F1684008A56CB /* SWRevealViewController.m */; };
-		C3E12E861F2F1D62008A56CB /* MyPlansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E12E851F2F1D62008A56CB /* MyPlansViewController.swift */; };
 		C3E12E891F2F1DC4008A56CB /* NewPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E12E881F2F1DC4008A56CB /* NewPlanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C32D11201F3175C100D1E158 /* MyPlansViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlansViewController.swift; sourceTree = "<group>"; };
 		C3DBF76A1F301809000C16B9 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		C3DBF76C1F3022C3000C16B9 /* ListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		C3E12E691F2F15FA008A56CB /* MorningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,7 +35,6 @@
 		C3E12E811F2F1684008A56CB /* MorningApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MorningApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		C3E12E821F2F1684008A56CB /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		C3E12E831F2F1684008A56CB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		C3E12E851F2F1D62008A56CB /* MyPlansViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlansViewController.swift; sourceTree = "<group>"; };
 		C3E12E881F2F1DC4008A56CB /* NewPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPlanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				C3E12E6E1F2F15FA008A56CB /* MenuController.swift */,
-				C3E12E851F2F1D62008A56CB /* MyPlansViewController.swift */,
+				C32D11201F3175C100D1E158 /* MyPlansViewController.swift */,
 				C3E12E881F2F1DC4008A56CB /* NewPlanViewController.swift */,
 				C3DBF76A1F301809000C16B9 /* AddTaskViewController.swift */,
 			);
@@ -192,8 +192,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3E12E861F2F1D62008A56CB /* MyPlansViewController.swift in Sources */,
 				C3E12E751F2F15FA008A56CB /* MorningApp.xcdatamodeld in Sources */,
+				C32D11211F3175C100D1E158 /* MyPlansViewController.swift in Sources */,
 				C3E12E891F2F1DC4008A56CB /* NewPlanViewController.swift in Sources */,
 				C3E12E6F1F2F15FA008A56CB /* MenuController.swift in Sources */,
 				C3DBF76D1F3022C3000C16B9 /* ListViewCell.swift in Sources */,

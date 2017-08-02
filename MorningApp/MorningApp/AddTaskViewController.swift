@@ -9,8 +9,9 @@
 import UIKit
 
 class AddTaskViewController: UIViewController {
-
     
+       static var totaltime:Int64 = 0
+       static var totaltime2:Int64 = 0
     
     @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var contentTextField: UITextField!
@@ -27,6 +28,12 @@ class AddTaskViewController: UIViewController {
         task.title = titleTextField.text
         task.content = contentTextField.text
         task.time = Int64(timeTextField.text!) ?? 0
+        //task.totaltime = AddTaskViewController.totaltime
+        
+        AddTaskViewController.totaltime += task.time
+        AddTaskViewController.totaltime2 += task.time
+        print(AddTaskViewController.totaltime)
+
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         navigationController?.popViewController(animated: true)
