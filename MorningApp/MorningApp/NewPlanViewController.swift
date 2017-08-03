@@ -11,10 +11,14 @@ import UIKit
 class NewPlanViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     
-    @IBOutlet var newplantableView: UITableView!
+    
+    @IBOutlet weak var newplantableView: UITableView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
+   
+    @IBOutlet weak var counttimeLabel: UILabel!
     
     var tasks : [Task] = []
+    var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +31,7 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
         newplantableView.delegate = self
         
         }
-    
+     counttimeLabel.text = String(AddTaskViewController.totaltime2)
         
     }
     
@@ -115,8 +119,65 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
         
     }
     
+    @IBAction func startButtonTapped(_ sender: UIButton) {
+        if !timer.isValid{
+            
+            timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(NewPlanViewController.letgo), userInfo: nil, repeats: true)
+            
+        }
+        
+        
+        
+    }
     
+    func letgo()
+        
+    {
+        
+        if AddTaskViewController.totaltime2 <= 0
+            
+        {
+            
+            
+            
+            timer.invalidate()
+            
+            
+            
+        }
+            
+        else
+            
+        {
+            
+            AddTaskViewController.totaltime2 -= 1
+            
+            counttimeLabel.text = String(AddTaskViewController.totaltime2)
+            
+            
+            
+        }
+        
+    
+    
+
+    }
+    
+    
+    @IBAction func pauseButtonTapped(_ sender: UIButton) {
+           timer.invalidate()
+    }
    
+    
+    @IBAction func resetButtonTapped(_ sender: UIButton) {
+          timer.invalidate()
+        
+           AddTaskViewController.totaltime2 = AddTaskViewController.totaltime
+        
+         counttimeLabel.text = String(AddTaskViewController.totaltime2)
+        
+
+    }
     @IBAction func unwindToListNotesViewController(_ segue: UIStoryboardSegue) {
         
         // for now, simply defining the method is sufficient.

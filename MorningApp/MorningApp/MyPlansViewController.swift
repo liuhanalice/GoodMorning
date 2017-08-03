@@ -18,8 +18,9 @@ class MyPlansViewController:UIViewController{
     @IBOutlet weak var secondLabel: UILabel!
     
     @IBOutlet weak var totalTimeLabel: UILabel!
+    
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    @IBOutlet weak var timeupLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     
     func updateTime () {
@@ -30,45 +31,18 @@ class MyPlansViewController:UIViewController{
         let seconds = calendar.component(.second, from: date)
         let day = calendar.component(.day, from: date)
         let month = calendar.component(.month, from: date)
+        let year = calendar.component(.year, from: date)
+        
+        dateLabel.text = String(year)+"."+String(month)+"."+String(day)
+        totalTimeLabel.text = String(AddTaskViewController.totaltime)
+        
         
         hourLabel.text = String(hour)
         minuteLabel.text = String(minutes)
         secondLabel.text = String(seconds)
-    }
-    @IBAction func startButtonTapped(_ sender: UIButton) {
-        
-        if !timer.isValid{
-            timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(MyPlansViewController.letgo), userInfo: nil, repeats: true)
-        }
         
     }
-    func letgo()
-    {
-        if AddTaskViewController.totaltime2 <= 0
-        {
-            
-            timer.invalidate()
-            timeupLabel.text = "Time Up!时间到！"
-        }
-        else
-        {
-            AddTaskViewController.totaltime2 -= 1
-            totalTimeLabel.text = String(AddTaskViewController.totaltime2)
-
-        }
-    }
-   
-    @IBAction func pauseButtonTapped(_ sender: UIButton) {
-        timer.invalidate()
-    }
-    
-    
-    @IBAction func resetButtonTapped(_ sender: UIButton) {
-        timer.invalidate()
-        AddTaskViewController.totaltime2 = AddTaskViewController.totaltime
-        totalTimeLabel.text = String(AddTaskViewController.totaltime2)
-    }
-    override func viewDidLoad() {
+            override func viewDidLoad() {
         super.viewDidLoad()
         updateTime()
         
@@ -80,10 +54,10 @@ class MyPlansViewController:UIViewController{
             
             //let timer = Timer.init(timeInterval: 1, target: self, selector: Selector.init("updateTime"), userInfo: nil, repeats: true)
             _ = Timer.scheduledTimer(timeInterval: 1, target:self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
-            
-            
-            
-            totalTimeLabel.text = String(AddTaskViewController.totaltime2)
+           
+           
+
+           
             
         }
         

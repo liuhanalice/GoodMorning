@@ -43,7 +43,23 @@ class AddTaskViewController: UIViewController {
         titleTextField.text = "Exercise 锻炼"
     }
     
+    @IBAction func tidyupButtonTapped(_ sender: UIButton) {
+        titleTextField.text = "Tidy UP 整理"
+    }
     
+    @IBAction func washingButtonTapped(_ sender: UIButton) {
+        titleTextField.text = "Washing 洗漱"
+    }
+    @IBAction func dressingButtonTapped(_ sender: Any) {
+        titleTextField.text = "Dressing 着装"
+    }
 
+    @IBAction func makeupButtonTapped(_ sender: UIButton) {
+        titleTextField.text = "Make Up 化妆"
+    }
+    @IBAction func breakfastButtonTapped(_ sender: UIButton) {
+        titleTextField.text = "Breakfast 早餐"
+    }
+    
 }
 
