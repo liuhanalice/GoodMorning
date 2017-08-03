@@ -19,6 +19,9 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var tasks : [Task] = []
     var timer = Timer()
+    static var newtime:Int64 = 0
+    static var countrow = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,7 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
         newplantableView.delegate = self
         
         }
+     NewPlanViewController.newtime = 0
      counttimeLabel.text = String(AddTaskViewController.totaltime2)
         
     }
@@ -38,6 +42,8 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewWillAppear(_ animated: Bool) {
         getData()
         newplantableView.reloadData()
+        NewPlanViewController.newtime = 0
+        print("dad \(NewPlanViewController.countrow)")
     }
    
    
@@ -68,14 +74,17 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.textLabel?.numberOfLines = 3
         
         cell.textLabel?.text = titletext+task.title!+"\n"+contenttext+task.content!+"\n"+timetext+String(task.time)+timeunit
+        //print(task.time)
         
-        print(AddTaskViewController.totaltime)
-        
+        NewPlanViewController.newtime += task.time
+        AddTaskViewController.totaltime2 = NewPlanViewController.newtime
+        print(AddTaskViewController.totaltime2)
         return cell
         
         
         
     }
+   
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
@@ -89,7 +98,9 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
             AddTaskViewController.totaltime2 = AddTaskViewController.totaltime2-task.time
             context.delete(task)
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
-           
+            NewPlanViewController.newtime = 0
+            AddTaskViewController.totaltime2 = NewPlanViewController.newtime
+            NewPlanViewController.countrow -= 1
             do
             {
                 tasks = try context.fetch(Task.fetchRequest())}
@@ -123,7 +134,7 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBAction func startButtonTapped(_ sender: UIButton) {
         if !timer.isValid{
             
-            timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(NewPlanViewController.letgo), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(NewPlanViewController.letgo), userInfo: nil, repeats: true)
             
         }
         
@@ -173,7 +184,7 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBAction func resetButtonTapped(_ sender: UIButton) {
           timer.invalidate()
         
-           AddTaskViewController.totaltime2 = AddTaskViewController.totaltime
+           AddTaskViewController.totaltime2 = NewPlanViewController.newtime
         
          counttimeLabel.text = String(AddTaskViewController.totaltime2)
         
@@ -185,6 +196,9 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
         // we'll add code later
         
     }
-        
+    @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
+       
+    }
+    
     
 }

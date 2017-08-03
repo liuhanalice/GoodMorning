@@ -245,7 +245,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eyq-aA-HqR" id="IeM-i7-d9m">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -329,6 +329,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="BHK-ih-mcN">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
+                                <action selector="addButtonTapped:" destination="e5U-di-o2X" id="927-0D-tPO"/>
                                 <segue destination="8eP-oD-dRw" kind="show" id="Eu8-7K-chS"/>
                             </connections>
                         </barButtonItem>
@@ -539,6 +540,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3DV-Sb-qi7">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
+                                <action selector="cancelButtonTapped:" destination="8eP-oD-dRw" id="xNo-f0-q3i"/>
                                 <segue destination="QAI-UD-IIS" kind="unwind" unwindAction="unwindToListNotesViewController:" id="M4S-yh-KkQ"/>
                             </connections>
                         </barButtonItem>

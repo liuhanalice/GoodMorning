@@ -39,12 +39,17 @@ class AddTaskViewController: UIViewController {
         AddTaskViewController.totaltime = task.totaltimecore
         AddTaskViewController.totaltime2 = task.totaltimecore
         //print(task.totaltimecore)
-
+        
+        NewPlanViewController.newtime = 0
+        NewPlanViewController.countrow += 1
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        NewPlanViewController.newtime = 0
+    }
     @IBAction func ExerciseButtonTapped(_ sender: UIButton) {
         titleTextField.text = "Exercise 锻炼"
     }
