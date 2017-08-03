@@ -21,6 +21,10 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
     var timer = Timer()
     static var newtime:Int64 = 0
     static var countrow = 0
+    var showtime = 0
+    
+    var showtimer = Timer()
+    
     
     
     override func viewDidLoad() {
@@ -137,52 +141,44 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(NewPlanViewController.letgo), userInfo: nil, repeats: true)
             
         }
-        
-        
-        
+        showtimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(NewPlanViewController.countcount), userInfo: nil, repeats: true)
+   }
+   
+    func countcount()
+    {
+        showtime += 1
+        timerLabel.text = String(showtime)
     }
     
     func letgo()
         
     {
-        
-        if AddTaskViewController.totaltime2 <= 0
-            
-        {
-            
-            
-            
+        if AddTaskViewController.totaltime2 <= 0{
             timer.invalidate()
-            
-            
-            
         }
             
-        else
-            
-        {
-            
+        else{
             AddTaskViewController.totaltime2 -= 1
-            
             counttimeLabel.text = String(AddTaskViewController.totaltime2)
-            
-            
-            
         }
         
-    
-    
-
     }
+    
+    
+    @IBOutlet weak var timerLabel: UILabel!
     
     
     @IBAction func pauseButtonTapped(_ sender: UIButton) {
            timer.invalidate()
+        showtimer.invalidate()
     }
    
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
           timer.invalidate()
+        showtimer.invalidate()
+        showtime = 0
+        counttimeLabel.text = String(showtime)
         
            AddTaskViewController.totaltime2 = NewPlanViewController.newtime
         
