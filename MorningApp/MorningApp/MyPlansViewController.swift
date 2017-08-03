@@ -34,7 +34,7 @@ class MyPlansViewController:UIViewController{
         let year = calendar.component(.year, from: date)
         
         dateLabel.text = String(year)+"."+String(month)+"."+String(day)
-        totalTimeLabel.text = String(AddTaskViewController.totaltime)
+       // totalTimeLabel.text = String(AddTaskViewController.totaltime)
         
         
         hourLabel.text = String(hour)

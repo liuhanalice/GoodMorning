@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
 class AddTaskViewController: UIViewController {
+   
     
        static var totaltime:Int64 = 0
        static var totaltime2:Int64 = 0
@@ -25,14 +25,20 @@ class AddTaskViewController: UIViewController {
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let task = Task(context: context)
+        
         task.title = titleTextField.text
         task.content = contentTextField.text
         task.time = Int64(timeTextField.text!) ?? 0
-        //task.totaltime = AddTaskViewController.totaltime
+        //print(task.totaltimecore)
         
-        AddTaskViewController.totaltime += task.time
-        AddTaskViewController.totaltime2 += task.time
-        print(AddTaskViewController.totaltime)
+        task.totaltimecore += task.time
+        //AddTaskViewController.totaltime2 += task.time
+        
+       
+      
+        AddTaskViewController.totaltime = task.totaltimecore
+        AddTaskViewController.totaltime2 = task.totaltimecore
+        //print(task.totaltimecore)
 
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()

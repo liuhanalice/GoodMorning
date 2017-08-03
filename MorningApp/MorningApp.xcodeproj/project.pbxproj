@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C32D11211F3175C100D1E158 /* MyPlansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D11201F3175C100D1E158 /* MyPlansViewController.swift */; };
+		C3BE68FE1F330A1200DE0B65 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE68FD1F330A1200DE0B65 /* CoreDataHelper.swift */; };
 		C3DBF76B1F301809000C16B9 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBF76A1F301809000C16B9 /* AddTaskViewController.swift */; };
 		C3DBF76D1F3022C3000C16B9 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBF76C1F3022C3000C16B9 /* ListViewCell.swift */; };
 		C3E12E6D1F2F15FA008A56CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E12E6C1F2F15FA008A56CB /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		C32D11201F3175C100D1E158 /* MyPlansViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlansViewController.swift; sourceTree = "<group>"; };
+		C3BE68FD1F330A1200DE0B65 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		C3DBF76A1F301809000C16B9 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		C3DBF76C1F3022C3000C16B9 /* ListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		C3E12E691F2F15FA008A56CB /* MorningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 		C3DBF7721F305136000C16B9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C3BE68FD1F330A1200DE0B65 /* CoreDataHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				C3E12E6F1F2F15FA008A56CB /* MenuController.swift in Sources */,
 				C3DBF76D1F3022C3000C16B9 /* ListViewCell.swift in Sources */,
 				C3E12E6D1F2F15FA008A56CB /* AppDelegate.swift in Sources */,
+				C3BE68FE1F330A1200DE0B65 /* CoreDataHelper.swift in Sources */,
 				C3E12E841F2F1684008A56CB /* SWRevealViewController.m in Sources */,
 				C3DBF76B1F301809000C16B9 /* AddTaskViewController.swift in Sources */,
 			);

@@ -106,16 +106,17 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
     
     
     
-    func getData()
+    func getData()->[Task]
     {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         do {
             tasks = try context.fetch(Task.fetchRequest())
+            return tasks
         }
         catch{
             print("Fetching Faild")
         }
-       
+       return[]
         
     }
     

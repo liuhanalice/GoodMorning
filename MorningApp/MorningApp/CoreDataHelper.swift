@@ -15,24 +15,27 @@ class CoreDataHelper {
     static let persistentContainer = appDelegate.persistentContainer
     static let managedContext = persistentContainer.viewContext
     //static methods will go here
-    static func newNote() -> Note {
-        let note = NSEntityDescription.insertNewObject(forEntityName: "Note", into: managedContext) as! Note
-        return note
+    static func newTask() -> Task {
+        let task = NSEntityDescription.insertNewObject(forEntityName: "Task", into: managedContext) as! Task
+        return task
     }
     
-    static func saveNote() {
+    static func saveTime() {
         do {
             try managedContext.save()
-        } catch let error as NSError {
+        }
+        catch let error as NSError {
             print("Could not save \(error)")
         }
     }
-    static func delete(note: Note) {
-        managedContext.delete(note)
-        saveNote()
+    
+    static func delete(task: Task) {
+        managedContext.delete(task)
+        saveTime()
     }
-    static func retrieveNotes() -> [Note] {
-        let fetchRequest = NSFetchRequest<Note>(entityName: "Note")
+    
+    static func retrieveTime() -> [Task] {
+        let fetchRequest = NSFetchRequest<Task>(entityName: "Task")
         do {
             let results = try managedContext.fetch(fetchRequest)
             return results
