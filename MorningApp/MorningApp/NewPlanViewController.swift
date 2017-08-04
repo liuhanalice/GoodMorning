@@ -14,6 +14,7 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var newplantableView: UITableView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var comeonLabel: UILabel!
    
     @IBOutlet weak var counttimeLabel: UILabel!
     
@@ -38,7 +39,7 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
         newplantableView.delegate = self
         
         }
-     NewPlanViewController.newtime = 0
+     //NewPlanViewController.newtime = 0
      counttimeLabel.text = String(AddTaskViewController.totaltime2)
         
     }
@@ -47,7 +48,8 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
         getData()
         newplantableView.reloadData()
         NewPlanViewController.newtime = 0
-        print("dad \(NewPlanViewController.countrow)")
+        //print("dad \(NewPlanViewController.countrow)")
+        
     }
    
    
@@ -68,21 +70,23 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
         
         
         let cell = UITableViewCell()
-        let titletext = "Title       标题: "
-        let contenttext = "Content 内容: "
-        let timetext = "Time      时间: "
-        let timeunit = "  Min分钟"
+        let titletext = "Title:     "
+        let contenttext = "Content:   "
+        let timetext = "Time:       "
+        let timeunit = "  Min"
         
         
         let task = tasks[indexPath.row]
         cell.textLabel?.numberOfLines = 3
         
         cell.textLabel?.text = titletext+task.title!+"\n"+contenttext+task.content!+"\n"+timetext+String(task.time)+timeunit
-        //print(task.time)
+        cell.textLabel?.textColor = UIColor .orange
+        cell.textLabel?.font = UIFont.init(name: "Chalkduster", size: 13)
         
         NewPlanViewController.newtime += task.time
         AddTaskViewController.totaltime2 = NewPlanViewController.newtime
         print(AddTaskViewController.totaltime2)
+        changewords()
         return cell
         
         
@@ -116,6 +120,7 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
             
     }
         tableView.reloadData()
+       
     }
     
     
@@ -141,13 +146,18 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(NewPlanViewController.letgo), userInfo: nil, repeats: true)
             
         }
+        if !showtimer.isValid
+        {
+            
         showtimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(NewPlanViewController.countcount), userInfo: nil, repeats: true)
+        }
    }
    
     func countcount()
     {
         showtime += 1
         timerLabel.text = String(showtime)
+        changewords()
     }
     
     func letgo()
@@ -171,7 +181,7 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBAction func pauseButtonTapped(_ sender: UIButton) {
            timer.invalidate()
         showtimer.invalidate()
-    }
+            }
    
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
@@ -183,6 +193,8 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
            AddTaskViewController.totaltime2 = NewPlanViewController.newtime
         
          counttimeLabel.text = String(AddTaskViewController.totaltime2)
+        comeonLabel.text = "Come On!加油！～"
+
         
 
     }
@@ -194,6 +206,17 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
        
+    }
+    
+    func changewords()
+    
+    {
+        print("1 \(Int64(showtime))")
+        print("2 \(NewPlanViewController.newtime)")
+       if Int64(showtime) >  NewPlanViewController.newtime
+       {
+           comeonLabel.text = "Congrats!完成啦～"
+        }
     }
     
     

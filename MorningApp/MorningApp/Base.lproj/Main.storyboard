@@ -92,12 +92,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyPlans我的计划" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUX-9S-Spa">
-                                                    <rect key="frame" x="10" y="37" width="171" height="26"/>
-                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
-                                                    <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="orangebackground2" translatesAutoresizingMaskIntoConstraints="NO" id="91Q-Ch-r4Q">
                                                     <rect key="frame" x="0.0" y="93" width="184" height="8"/>
                                                     <constraints>
@@ -105,7 +99,7 @@
                                                         <constraint firstAttribute="width" constant="226" id="KhL-hi-VM3"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="orangebackground2" translatesAutoresizingMaskIntoConstraints="NO" id="qAL-vX-G7u">
+                                                <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="orangebackground2" translatesAutoresizingMaskIntoConstraints="NO" id="qAL-vX-G7u">
                                                     <rect key="frame" x="10" y="103" width="367" height="8"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orangesun4" translatesAutoresizingMaskIntoConstraints="NO" id="ZmC-7U-hvJ">
@@ -114,17 +108,26 @@
                                                         <constraint firstAttribute="width" constant="71" id="weI-GL-wZX"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morning World!早安世界" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUX-9S-Spa">
+                                                    <rect key="frame" x="8" y="23" width="181" height="55"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="181" id="VxH-D7-PkX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                                    <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="91Q-Ch-r4Q" firstAttribute="leading" secondItem="jmt-xb-ecK" secondAttribute="leading" id="6UF-2P-mI1"/>
-                                                <constraint firstItem="91Q-Ch-r4Q" firstAttribute="top" secondItem="UUX-9S-Spa" secondAttribute="bottom" constant="30" id="7hu-xy-MJ6"/>
+                                                <constraint firstItem="UUX-9S-Spa" firstAttribute="top" secondItem="jmt-xb-ecK" secondAttribute="topMargin" constant="15" id="8fo-rW-i1s"/>
                                                 <constraint firstItem="qAL-vX-G7u" firstAttribute="top" secondItem="91Q-Ch-r4Q" secondAttribute="bottom" constant="2" id="93e-mO-nm8"/>
-                                                <constraint firstItem="UUX-9S-Spa" firstAttribute="centerY" secondItem="jmt-xb-ecK" secondAttribute="centerY" id="9dG-g7-Jwq"/>
-                                                <constraint firstItem="UUX-9S-Spa" firstAttribute="leading" secondItem="qAL-vX-G7u" secondAttribute="leading" id="BZO-FX-Bc1"/>
                                                 <constraint firstItem="ZmC-7U-hvJ" firstAttribute="leading" secondItem="jmt-xb-ecK" secondAttribute="leading" constant="187" id="CF1-K5-TWF"/>
                                                 <constraint firstItem="ZmC-7U-hvJ" firstAttribute="top" secondItem="jmt-xb-ecK" secondAttribute="topMargin" constant="7" id="Cvv-Gn-6Yi"/>
-                                                <constraint firstItem="ZmC-7U-hvJ" firstAttribute="leading" secondItem="UUX-9S-Spa" secondAttribute="trailing" constant="6" id="GQ4-Xj-HW1"/>
-                                                <constraint firstItem="UUX-9S-Spa" firstAttribute="centerY" secondItem="ZmC-7U-hvJ" secondAttribute="centerY" id="XR5-7k-iXm"/>
+                                                <constraint firstItem="UUX-9S-Spa" firstAttribute="centerY" secondItem="jmt-xb-ecK" secondAttribute="centerY" id="DD0-5H-su8"/>
+                                                <constraint firstItem="91Q-Ch-r4Q" firstAttribute="top" secondItem="UUX-9S-Spa" secondAttribute="bottom" constant="15" id="I0r-Zb-9Bm"/>
+                                                <constraint firstItem="UUX-9S-Spa" firstAttribute="centerY" secondItem="ZmC-7U-hvJ" secondAttribute="centerY" id="Zm1-74-svJ"/>
+                                                <constraint firstItem="UUX-9S-Spa" firstAttribute="leading" secondItem="jmt-xb-ecK" secondAttribute="leadingMargin" id="pFp-Hu-0Gt"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -144,8 +147,11 @@
                                                         <constraint firstAttribute="width" constant="71" id="9ap-At-ShL"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NewPlan新建计划" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2B3-2a-tDu">
-                                                    <rect key="frame" x="77" y="37" width="259" height="26"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morning Plan早晨计划" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2B3-2a-tDu">
+                                                    <rect key="frame" x="87" y="19" width="162" height="63"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="162" id="AJ3-7O-oyM"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
                                                     <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -153,11 +159,11 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="aVp-QE-CAg" firstAttribute="leading" secondItem="8AW-RZ-fgP" secondAttribute="leadingMargin" id="Cf5-va-0yW"/>
-                                                <constraint firstItem="2B3-2a-tDu" firstAttribute="leading" secondItem="8AW-RZ-fgP" secondAttribute="leadingMargin" constant="69" id="I9M-qn-HuJ"/>
-                                                <constraint firstItem="2B3-2a-tDu" firstAttribute="centerY" secondItem="8AW-RZ-fgP" secondAttribute="centerY" id="ZDh-K4-a8I"/>
+                                                <constraint firstItem="2B3-2a-tDu" firstAttribute="leading" secondItem="aVp-QE-CAg" secondAttribute="trailing" constant="8" symbolic="YES" id="GKb-RO-gOL"/>
+                                                <constraint firstItem="2B3-2a-tDu" firstAttribute="top" secondItem="8AW-RZ-fgP" secondAttribute="topMargin" constant="11" id="WyN-xe-Aku"/>
+                                                <constraint firstItem="2B3-2a-tDu" firstAttribute="centerY" secondItem="8AW-RZ-fgP" secondAttribute="centerY" id="gCi-ti-VeI"/>
                                                 <constraint firstItem="aVp-QE-CAg" firstAttribute="top" secondItem="8AW-RZ-fgP" secondAttribute="topMargin" constant="7" id="oXw-7b-V3i"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="2B3-2a-tDu" secondAttribute="trailing" constant="31" id="xM8-jm-BsM"/>
-                                                <constraint firstItem="2B3-2a-tDu" firstAttribute="centerY" secondItem="aVp-QE-CAg" secondAttribute="centerY" id="yN9-wu-x52"/>
+                                                <constraint firstItem="2B3-2a-tDu" firstAttribute="centerY" secondItem="aVp-QE-CAg" secondAttribute="centerY" id="vkr-0a-ofz"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -222,7 +228,7 @@
             </objects>
             <point key="canvasLocation" x="973.60000000000002" y="38.23088455772114"/>
         </scene>
-        <!--New Plan-->
+        <!--New Plan View Controller-->
         <scene sceneID="M9w-SB-VEC">
             <objects>
                 <viewController id="e5U-di-o2X" customClass="NewPlanViewController" customModule="MorningApp" sceneMemberID="viewController">
@@ -237,15 +243,15 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newback" translatesAutoresizingMaskIntoConstraints="NO" id="gJL-bu-7Uu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L4Q-y5-5va">
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L4Q-y5-5va">
                                 <rect key="frame" x="0.0" y="64" width="375" height="237"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eyq-aA-HqR">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="plancell" id="eyq-aA-HqR">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eyq-aA-HqR" id="IeM-i7-d9m">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -272,7 +278,7 @@
                                 <rect key="frame" x="66" y="434" width="100" height="34"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="120" translatesAutoresizingMaskIntoConstraints="NO" id="m16-1T-wXj">
-                                <rect key="frame" x="27" y="491" width="320" height="31"/>
+                                <rect key="frame" x="27.5" y="491" width="320" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfh-pW-SsA">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="31"/>
@@ -298,7 +304,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pY5-pT-IJg">
-                                <rect key="frame" x="173.5" y="401" width="27.5" height="31"/>
+                                <rect key="frame" x="174" y="401" width="27.5" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.87936770915985107" green="0.30793103575706482" blue="0.16458486020565033" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -313,7 +319,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcS-kQ-Jwj">
-                                <rect key="frame" x="137" y="449" width="100" height="34"/>
+                                <rect key="frame" x="137.5" y="449" width="100" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="JXh-5B-gc8"/>
                                     <constraint firstAttribute="width" secondItem="lcS-kQ-Jwj" secondAttribute="height" multiplier="144:49" id="bnz-vl-zPd"/>
@@ -323,6 +329,12 @@
                                     <action selector="startButtonTapped:" destination="e5U-di-o2X" eventType="touchUpInside" id="7bi-78-o9j"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Come On!加油!~" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMk-tz-TDI">
+                                <rect key="frame" x="115.5" y="586" width="145.5" height="21.5"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <color key="textColor" red="0.87945914268493652" green="0.3275621235370636" blue="0.18421462178230286" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -343,8 +355,10 @@
                             <constraint firstItem="pY5-pT-IJg" firstAttribute="centerY" secondItem="LOJ-kz-G9h" secondAttribute="centerY" id="TN0-UQ-NjH"/>
                             <constraint firstAttribute="trailing" secondItem="L4Q-y5-5va" secondAttribute="trailing" id="XID-SC-MXY"/>
                             <constraint firstAttribute="bottom" secondItem="LOJ-kz-G9h" secondAttribute="bottom" constant="239" id="bjG-gR-FUC"/>
+                            <constraint firstItem="aQO-5B-078" firstAttribute="top" secondItem="KMk-tz-TDI" secondAttribute="bottom" constant="60" id="dZG-2f-THU"/>
                             <constraint firstItem="m16-1T-wXj" firstAttribute="top" secondItem="f2U-DP-rNr" secondAttribute="bottom" constant="64" id="faB-NR-Zu0"/>
                             <constraint firstItem="L4Q-y5-5va" firstAttribute="leading" secondItem="K4P-iG-Y3c" secondAttribute="leading" id="ixC-sR-vTN"/>
+                            <constraint firstItem="KMk-tz-TDI" firstAttribute="centerX" secondItem="K4P-iG-Y3c" secondAttribute="centerX" id="jTA-hL-Txb"/>
                             <constraint firstItem="aQO-5B-078" firstAttribute="top" secondItem="L4Q-y5-5va" secondAttribute="bottom" constant="366" id="krY-Mb-Mzk"/>
                             <constraint firstItem="lcS-kQ-Jwj" firstAttribute="top" secondItem="Rgz-XA-lN5" secondAttribute="top" constant="15" id="mUH-gK-pqW"/>
                             <constraint firstItem="L4Q-y5-5va" firstAttribute="top" secondItem="HHt-eW-Otr" secondAttribute="bottom" id="miB-uv-RwU"/>
@@ -355,7 +369,7 @@
                             <constraint firstItem="LOJ-kz-G9h" firstAttribute="leading" secondItem="K4P-iG-Y3c" secondAttribute="leadingMargin" constant="59" id="z55-85-OdS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New Plan" id="QdO-IG-rYp">
+                    <navigationItem key="navigationItem" id="QdO-IG-rYp">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="Nh9-RL-Ft0">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
@@ -368,6 +382,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="comeonLabel" destination="KMk-tz-TDI" id="BQa-SP-jwu"/>
                         <outlet property="counttimeLabel" destination="pY5-pT-IJg" id="a9I-dr-5GV"/>
                         <outlet property="menuButton" destination="Nh9-RL-Ft0" id="JPr-GQ-9Tf"/>
                         <outlet property="newplantableView" destination="L4Q-y5-5va" id="Uw9-Fb-qAX"/>
@@ -378,7 +393,7 @@
             </objects>
             <point key="canvasLocation" x="2775.1999999999998" y="408.84557721139436"/>
         </scene>
-        <!--Title-->
+        <!--Add Task View Controller-->
         <scene sceneID="SPB-RQ-jR4">
             <objects>
                 <viewController id="8eP-oD-dRw" customClass="AddTaskViewController" customModule="MorningApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -391,10 +406,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newback" translatesAutoresizingMaskIntoConstraints="NO" id="fLw-zd-iGz">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="Zio-8f-Mxn">
-                                <rect key="frame" x="15" y="107" width="346" height="483"/>
+                                <rect key="frame" x="14.5" y="107" width="346" height="483"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xoM-Ar-fnM">
                                         <rect key="frame" x="2" y="0.0" width="342" height="20"/>
@@ -582,7 +597,7 @@
                             <constraint firstItem="fLw-zd-iGz" firstAttribute="leading" secondItem="91h-mU-dhH" secondAttribute="leading" id="yUb-eu-48h"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="I44-lx-0TB">
+                    <navigationItem key="navigationItem" id="I44-lx-0TB">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3DV-Sb-qi7">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -735,16 +750,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="eCB-vv-eWU">
-                                <rect key="frame" x="130" y="301" width="115" height="65"/>
+                                <rect key="frame" x="130" y="282" width="115" height="103"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PC2-mq-s9B">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EX7-SJ-j44">
                                         <rect key="frame" x="0.0" y="0.0" width="115" height="27"/>
                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
                                         <color key="textColor" red="1" green="0.62745098039215685" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGU-5Z-eMz">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PC2-mq-s9B">
                                         <rect key="frame" x="0.0" y="38" width="115" height="27"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                        <color key="textColor" red="1" green="0.62745098039215685" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGU-5Z-eMz">
+                                        <rect key="frame" x="0.0" y="76" width="115" height="27"/>
                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
                                         <color key="textColor" red="1" green="0.62745098040000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -780,6 +801,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="citynameLabel" destination="EX7-SJ-j44" id="SpL-dD-sNR"/>
                         <outlet property="dateLabel" destination="vBR-19-yRE" id="hhD-zO-vmu"/>
                         <outlet property="descriptionLabel" destination="CGU-5Z-eMz" id="vZ4-C2-vmz"/>
                         <outlet property="hourLabel" destination="0DS-Ni-LgQ" id="h5s-BR-25G"/>
@@ -817,6 +839,6 @@
         <image name="start" width="432" height="147"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mem-7R-8j5"/>
+        <segue reference="acX-9Y-ctu"/>
     </inferredMetricsTieBreakers>
 </document>

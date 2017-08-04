@@ -25,6 +25,7 @@ class MyPlansViewController:UIViewController{
     
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var citynameLabel: UILabel!
     
    
     
@@ -89,10 +90,10 @@ func getData(city: String) {
                 print(main)
                 let wea = json["weather"] as! [Any]
                 let temp2 = wea[0]
-                
-                
                 let finalDictionary = temp2 as! [String : Any]
                 let des = finalDictionary["description"] as! String
+               
+                
                
                 
                 
@@ -105,6 +106,7 @@ func getData(city: String) {
                     
                     self.temperatureLabel.text = String(temp) + "℃"
                     self.descriptionLabel.text = des
+                    self.citynameLabel.text = "Beijing"
                 }
                 
             }
