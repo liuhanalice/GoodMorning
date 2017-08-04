@@ -21,6 +21,11 @@ class AddTaskViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.titleTextField.resignFirstResponder()
+        self.contentTextField.resignFirstResponder()
+        self.timeTextField.resignFirstResponder()
+    }
     @IBAction func saveButtonTapped(_ sender: Any) {
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
