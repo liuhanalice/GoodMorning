@@ -178,7 +178,7 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
           timer.invalidate()
         showtimer.invalidate()
         showtime = 0
-        counttimeLabel.text = String(showtime)
+        timerLabel.text = String(showtime)
         
            AddTaskViewController.totaltime2 = NewPlanViewController.newtime
         

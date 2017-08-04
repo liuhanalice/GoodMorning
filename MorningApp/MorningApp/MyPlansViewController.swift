@@ -87,18 +87,24 @@ func getData(city: String) {
                 //the following code parses through the JSON object, you can experiment here and try to print and get different values from the JSON object
                 let main = json["main"] as! [String : Any]
                 print(main)
-                //let wea = json["weather"] as! [NSString:Any]
+                let wea = json["weather"] as! [Any]
+                let temp2 = wea[0]
+                
+                
+                let finalDictionary = temp2 as! [String : Any]
+                let des = finalDictionary["description"] as! String
+               
+                
                 
                 let temp = main["temp"] as! Int
                 print(temp)
-                //let des = wea["description"] as! String
-               // print(des)
+                print(des)
                 
                 //once you have collected the data you need, you can now update any UI objects on your view controller
                 DispatchQueue.main.async {
                     
                     self.temperatureLabel.text = String(temp) + "℃"
-                    //self.descriptionLabel.text = des
+                    self.descriptionLabel.text = des
                 }
                 
             }
