@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MorningApp.xcodeproj">
+      location = "self:/Users/liuhan/Documents/GoodMorning/GoodMorning/MorningApp/MorningApp.xcodeproj">
    </FileRef>
 </Workspace>
