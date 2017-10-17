@@ -48,6 +48,15 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
         getData()
         newplantableView.reloadData()
         NewPlanViewController.newtime = 0
+       
+        for task:Task in tasks // add this to make sure the time showed on the cell couted only once
+        {
+            NewPlanViewController.newtime += task.time //here
+        }
+        AddTaskViewController.totaltime2 = NewPlanViewController.newtime
+        print(AddTaskViewController.totaltime2)
+       
+        newplantableView.reloadData()
         //print("dad \(NewPlanViewController.countrow)")
         
     }
@@ -67,7 +76,7 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
     
    
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        // create new table cell
         
         let cell = UITableViewCell()
         let titletext = "Title:     "
@@ -83,9 +92,7 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.textLabel?.textColor = UIColor .orange
         cell.textLabel?.font = UIFont.init(name: "Chalkduster", size: 13)
         
-        NewPlanViewController.newtime += task.time
-        AddTaskViewController.totaltime2 = NewPlanViewController.newtime
-        print(AddTaskViewController.totaltime2)
+       
         changewords()
         return cell
         
@@ -98,7 +105,7 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        if editingStyle == .delete
+        if editingStyle == .delete // when the table cell is deleted
         {
             let task = tasks[indexPath.row]
             AddTaskViewController.totaltime = AddTaskViewController.totaltime-task.time

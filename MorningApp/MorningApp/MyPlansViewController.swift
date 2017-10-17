@@ -42,8 +42,7 @@ class MyPlansViewController:UIViewController{
         let year = calendar.component(.year, from: date)
         
         dateLabel.text = String(year)+"."+String(month)+"."+String(day)
-       // totalTimeLabel.text = String(AddTaskViewController.totaltime)
-        
+      
         
         hourLabel.text = String(hour)
         minuteLabel.text = String(minutes)
@@ -64,14 +63,15 @@ class MyPlansViewController:UIViewController{
             
             
         }
-              _ = Timer.scheduledTimer(timeInterval: 1, target:self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
+            _ = Timer.scheduledTimer(timeInterval: 1, target:self, selector: #selector(MyPlansViewController.updateTime), userInfo: nil, repeats: true)
             totalTimeLabel.text = String(NewPlanViewController.newtime)
-           getData(city:"Beijing")
+            
+            getData(city:"Beijing") // need to update with more cities by using location system?
     }
   
 
 
-func getData(city: String) {
+func getData(city: String) { // now using API-openweather
     
     
     let urlString = URL(string: "http://api.openweathermap.org/data/2.5/weather?q=\(String(describing: city))&units=metric&APPID=c10457489be06fbf428dbbb32ac7216a")
